@@ -166,3 +166,75 @@ section {
 .project-card button:hover {
     background: #e63956;
 }
+#skills {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background: #ff7eb3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff7eb3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff4f9a;
+}
+section {
+    padding: 60px 20px;
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15;
+    margin-top: 20px;
+}
+.skill {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+}
