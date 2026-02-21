@@ -76,6 +76,7 @@ nav ul li a{
 #projects h2{
     font-size:32px;
     margin-bottom:30px;
+    text-align: center;
 }
 
 .project-grid{
@@ -165,6 +166,22 @@ section {
 
 .project-card button:hover {
     background: #e63956;
+}
+.project-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+    transition: 0.3s;
+}
+.project-card:hover {
+    transform: scale(1.05);
+}
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 #skills {
     text-align: center;
