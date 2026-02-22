@@ -76,6 +76,7 @@ nav ul li a{
 #projects h2{
     font-size:32px;
     margin-bottom:30px;
+    text-align: center;
 }
 
 .project-grid{
@@ -166,6 +167,22 @@ section {
 .project-card button:hover {
     background: #e63956;
 }
+.project-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+    transition: 0.3s;
+}
+.project-card:hover {
+    transform: scale(1.05);
+}
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 #skills {
     text-align: center;
     padding: 60px 20px;
@@ -237,4 +254,73 @@ section {
     padding: 10px 20px;
     border-radius: 25px;
     font-weight: 500;
+}
+/* Day 7 Upgrade - Project Hover Effect */
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/* Day 7 Upgrade - Section Spacing */
+
+section {
+    padding: 80px 20px;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+body {
+    background-color: pink;
+}
+/* Day 7 Upgrade - Navbar Style */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+/* Day 7 Upgrade - Project Grid Layout */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+/* Day 7 Final Polish */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section fade feeling */
+section {
+    transition: all 0.4s ease-in-out;
+}
+/* Day 7 Final Footer Style */
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #00adb5;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
 }
