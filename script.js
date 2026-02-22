@@ -1,55 +1,326 @@
-document.querySelectorAll("nav a").forEach(link=> {
-    link.addEventListener("click", function(e)
-    {
-        e.preventDefault();
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-        const targetSection =
-document.querySelector(this.getAttribute("href"
+body{
+    margin: 0;
+}
+/* Navbar */
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    z-index: 1000;
+}
+.logo{
+    font-size: 22px;
+}
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    padding: 5px 10px;
+}
+#hero{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg,#ff416c,#ff4b2b);
+}
+.hero-content h1{
+    font-size: 48px;
+}
+.hero-content p{
+    font-size: 20px;
+    margin-top: 10px;
+}
+#about{
+    padding: 100px 20px;
+    background: #f4f4f4;
+    text-align: center;
+}
+#about h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+#about p{
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+#projects{
+    padding:100px 20px;
+    background:#fff;
+    text-align:center;
+}
 
-));
-        targetSection.scrollIntoView({
-           behavior:"smooth"
-});    
-    });
-});
-document.querySelectorAll("nav a").forEach(link => {
-    link.addEventListener("click", function(e) {
-        e.preventDefault();
-        const targetSection = document.querySelector(this.getAttribute("href"));
-        targetSection.scrollIntoView({
-            behavior: "smooth"
-        });
-    });
-});
+#projects h2{
+    font-size:32px;
+    margin-bottom:30px;
+    text-align: center;
+}
 
-// Simple fade-in effect for Projects section
-const projects = document.querySelectorAll('.project-card');
+.project-grid{
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap:20px;
+    max-width:1000px;
+    margin:auto;
+}
 
-window.addEventListener('scroll', () => {
-    projects.forEach(project => {
-        const top = project.getBoundingClientRect().top;
-        const windowHeight = window.innerHeight;
-        if(top < windowHeight - 100){
-            project.style.opacity = 1;
-            project.style.transform = "translateY(0)";
-            project.style.transition = "all 0.6s ease-in-out";
-        } else {
-            project.style.opacity = 0;
-            project.style.transform = "translateY(50px)";
-        }
-    });
-});
-document.getElementById("contactForm")
-.addEventListener("submit", function(e) {
-    e.preventDefault();
-    alert("Message sent successfully!");
-});
-document.querySelectorAll('nav a').forEach(anchor => {
-    anchor.addEventListener('click', function(e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href'))
-        .scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
-});
+.project-card{
+    background:#f4f4f4;
+    padding:20px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    opacity:0;
+    transform: translateY(50px);
+}
+
+.project-card:hover{
+    transform: translateY(-10px);
+    box-shadow:0 5px 20px rgba(0,0,0,0.2);
+}
+
+.project-card h3{
+    margin-bottom:10px;
+}
+
+.project-card p{
+    font-size:16px;
+    color:#333;
+    margin-bottom:15px;
+}
+
+.project-card a{
+    text-decoration:none;
+    color:white;
+    background:#ff416c;
+    padding:8px 15px;
+    border-radius:5px;
+    transition: background 0.3s;
+}
+
+.project-card a:hover{
+    background:#ff4b2b;
+}
+section {
+    padding: 60px 10%;
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.project-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.project-card h3 {
+    margin-bottom: 10px;
+}
+
+.project-card button {
+    background: #ff4d6d;
+    border: none;
+    padding: 10px 18px;
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.project-card {
+    transition: 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.project-card button:hover {
+    background: #e63956;
+}
+.project-card {
+    background-color: #ffffff;
+    padding: 20px;
+    margin: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 1);
+    transition: 0.3s;
+}
+.project-card:hover {
+    transform: scale(1.05);
+}
+.project-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+#skills {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.skill {
+    background: #ff7eb3;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.skill:hover {
+    transform: scale(1.1);
+}
+#contact {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+form {
+    max-width: 400px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    background: #ff7eb3;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #ff4f9a;
+}
+section {
+    padding: 60px 20px;
+}
+.skills-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15;
+    margin-top: 20px;
+}
+.skill {
+    background: linear-gradient(45deg, #ff7eb3, #ff758c);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 25px;
+    font-weight: 500;
+}
+/* Day 7 Upgrade - Project Hover Effect */
+
+.project-card {
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+/* Day 7 Upgrade - Section Spacing */
+
+section {
+    padding: 80px 20px;
+}
+
+h2 {
+    margin-bottom: 25px;
+}
+body {
+    background-color: pink;
+}
+/* Day 7 Upgrade - Navbar Style */
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #ffffff;
+    box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+    z-index: 1000;
+}
+/* Day 7 Upgrade - Project Grid Layout */
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+/* Day 7 Final Polish */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section fade feeling */
+section {
+    transition: all 0.4s ease-in-out;
+}
+/* Day 7 Final Footer Style */
+
+footer {
+    background-color: #111;
+    color: white;
+    text-align: center;
+    padding: 25px 10px;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #00adb5;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
